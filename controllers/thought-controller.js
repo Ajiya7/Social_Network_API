@@ -29,7 +29,7 @@ module.exports = {
   // creating a thpought
   creatingThought(req, res) {
     thought
-      .create(body)
+      .create(req.body)
       .then(({ _id }) => {
         return user.findOneAndUpdate(
           { _id: req.params.userId },
